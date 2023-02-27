@@ -1,5 +1,10 @@
 # GIT_WEBPAGE
-
+This repo host two folders
+    This webpage was builded using seamonkey
+  * UTEP_Henry_Webpage_Final_2022_seamonkey/
+  This webpage was builded using google site
+  * UTEP_Henry_Webpage_Final_2023_Google_site/
+## Check repo status 
 $ git status
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -12,20 +17,22 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-
+## check the branch
 $ git branch -a
 * main
   remotes/origin/HEAD -> origin/main
   remotes/origin/main
-
+## Add files and folder and commit
 $ git add . && git commit -m "First Commit"
 [main d21fa14] First Commit
 ...
 
+## Check the links	
 $ git remote -v 
 origin	https://github.com/hrmoncada/GIT_WEBPAGE.git (fetch)
 origin	https://github.com/hrmoncada/GIT_WEBPAGE.git (push)
 
+## Push commit 
 $ git push origin main
 Username for 'https://github.com': hrmoncada
 Password for 'https://hrmoncada@github.com': 
