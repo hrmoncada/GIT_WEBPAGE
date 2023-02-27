@@ -1,0 +1,347 @@
+%\documentstyle[11pt,a4]{article}
+%\documentclass[a4paper]{article}
+\documentclass[a4paper, 11pt]{article}
+% Seems like it does not support 9pt and less. Anyways I should stick to 10pt.
+%\documentclass[a4paper, 9pt]{article}
+\topmargin-2.0cm
+
+\usepackage{fancyhdr}
+\usepackage{pagecounting}
+\usepackage[dvips]{color}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Math
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts} %para usar as fontes %matematicas, e pega fontes para \mathbb
+\usepackage{amsthm}   %ambientes com teoremas (usar depois de amsmath)
+%\usepackage{biblatex}
+%\usepackage{natbib}
+% Color Information from - http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/latex_advanced/node13.html
+
+% NEW COMMAND
+% marginsize{left}{right}{top}{bottom}:
+%\marginsize{3cm}{2cm}{1cm}{1cm}
+%\marginsize{0.85in}{0.85in}{0.625in}{0.625in}
+
+\advance\oddsidemargin-0.65in
+%\advance\evensidemargin-1.5cm
+\textheight9.2in
+\textwidth6.75in
+\newcommand\bb[1]{\mbox{\em #1}}
+\def\baselinestretch{1.05}
+%\pagestyle{empty}
+
+\newcommand{\hsp}{\hspace*{\parindent}}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+%\definecolor{gray}{rgb}{1.0,1.0,1.0}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Graphs path to the Picture Folder
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %\graphicspath{/home/henry/Desktop/UTEP_Proposal_Thesis/PhD_Thesis/Pictures}
+% \graphicspath{{Pictures/}{Data/}{References}} % Two folders Picture and Data    
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % page edition
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %\linespread{2.5}
+% \addtolength{\textwidth}{3cm}
+% \addtolength{\textheight}{3cm}
+% \addtolength{\hoffset}{-2cm}
+% % In case you need to adjust margins:
+% \topmargin=-0.5 in      %
+% \evensidemargin= .5 in     %
+% \oddsidemargin= .5 in      %
+% \textwidth = 7 in        %
+% \textheight = 9.0 in       %
+% \headsep = 0.15 in  
+% \pagestyle{fancyplain}
+% \lhead{\fancyplain{}{\thepage/\totalpages{}}}}
+% \rhead{\fancyplain{}{Henry R Moncada}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{biblatex}
+\bibliographystyle{plain}
+%\bibliography{urlbib}
+
+\begin{document}
+\thispagestyle{fancy}
+%\pagenumbering{gobble}
+%\fancyhead[location]{text} 
+% Leave Left and Right Header empty.
+\lhead{}
+\rhead{}
+%\rhead{\thepage}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt} 
+\fancyfoot[C]{\footnotesize \textcolor{gray}{ }} 
+
+%\pagestyle{myheadings}
+%\markboth{Sundar Iyer}{Sundar Iyer}
+
+\pagestyle{fancy}
+\lhead{\textcolor{gray}{\it Henry R. Moncada}}
+\rhead{\textcolor{gray}{\thepage/\totalpages{}}}
+%\rhead{\thepage}
+%\renewcommand{\headrulewidth}{0pt} 
+%\renewcommand{\footrulewidth}{0pt} 
+%\fancyfoot[C]{\footnotesize http://www.stanford.edu/$\sim$sundaes/application} 
+%\ref{TotPages}
+
+% This kind of makes 10pt to 9 pt.
+\begin{small}
+
+%\vspace*{0.1cm}
+\begin{center}
+{\LARGE \bf RESEARCH STATEMENT}\\
+\vspace*{0.1cm}
+{\normalsize Henry R. Moncada (hrmoncada@gmail.com)}
+\end{center}
+%\vspace*{0.2cm}
+
+%\begin{document}
+%\centerline {\Large \bf Research Statement for Sundar Iyer}
+%\vspace{0.5cm}
+
+% Write about research interests...
+%\footnotemark
+%\footnotetext{Check This}
+
+My research interests span the areas of parallel programming, mathematical modeling, and machine learning. 
+A common thread in my research is in understanding the theory and design of mathematical modeling framework 
+to be used on scalable parallel architectures. Broadly speaking my Ph.D. research belongs to the area of 
+{\it parallel computing, electromagnetics mathematical modeling and 3D structure arrays}. 
+Most of my work has greatly benefited from interaction with a number of colleagues and my advisor.
+I describe my work below.
+%(which deals with the fundamental principles of 3D structure design),  an upcoming field which is still in its infancy and whose theoretical foundations are just being laid.
+
+% Say that research work has been both theoritical and practical.
+% One part of your Research Statement is a summary of your thesis work
+% you need to state clearly what your research topic is, and what you have accomplished to date as part of your thesis research.
+\subsubsection*{Background and Current Work}
+% PURPOSE OF THIS WORK: WRITE A PROGRAMMING CODE  
+My research consists of design a faster implementation of an algorithm to generate 3D spatially variant lattices (SVL) structures
+and improve its performance when it is running on a parallel computer system. 
+% SPATIAL VARIANT ALGORITHM  
+The algorithm is used to synthesize a SVL for a periodic structure. The algorithm has the ability to spatially vary the unit
+cell, the orientation of the unit cells, lattice spacing, fill fraction, material composition, and lattice symmetry.
+The algorithm produces a lattice that is smooth, continuous and free of defects.
+The lattice spacing remains strikingly uniform even when the lattice is spatially varied which it is important for maintain the 
+consistency of lattice's properties throughout its structure. Periodic structures like photonic crystals or metamaterial devices
+can be enhanced using the spatially variant algorithm, thus unlocking new physical mechanisms \cite{Rumpf_Synthesis_SVL_2012, SV_Periodic_Structures_in_Electromagnetic_2015}.
+
+% What TOOLS WE USED TO WROTE THE SPATIAL VARIANT ALGORITHM  
+A portable computer program for parallel architectures was developed for this computer simulation. To write the code, we pick a general-purpose programming language
+that supports structured programming and two computer science tools. The Fastest Fourier Transform in the West (FFTW) was used to handle the Fourier transform of the
+unit cell device and the Portable, Extensible Toolkit for Scientific Computation (PETSc) for handle the numerical linear algebra operations
+and Message Passing Interface (MPI) for distributed memory to improve the performance of the code that generates 3D SVL when it is executed on a parallel system. 
+
+%WHY THE SCALABILITY IS IMPORTANT TO BE STUDY
+A study of the performance, efficiency and scalability of the SVL code on the two architectures on Stampede2 (KNL and SKX) was develop on this research.
+In a parallel computer system each individual component is identical in nature and can perform the entire tasks of the larger system, althougth usually at a slower rate.
+Of course it will be naive to expect that we could just bunch together a number of parallel components and get high performance. The performance of any parallel system is governed by 
+\begin{itemize}
+\item The architecture used to connect the many components. 
+\item The resource management (load balancing) algorithm used to allocate tasks amongst the parallel components. 
+\end{itemize}
+On the other site, a scalable code can handle proportionally very small to large tasks of computational operations.
+To scale the SVL code, we use the isoefficiency analysis to proportionally increase the problem size and resources
+to study the scalability of the SVL code. This type of analysis is important to understand the performance of the SVL code
+when it is executed on a supercomputer and find the best way to maximize its performance.
+%GOALS
+For my Ph.D. research, two main goals were stablished to be achieved with the code design of SVL parallel application.
+\begin{itemize}
+\item Performance:  The capacity to reduce the execution time to solve the problem when the computing resources increase. We metric the performance of a parallel application normally by comparing the execution time with multiple processors and the execution time with just one processor. 
+% \begin{itemize}
+% \item Assess the performance of a processor using normally by measuring the speed or the number of operations that it does in a certain period of time. 
+% \item Assess the performance of a parallel application normally by comparing the execution time with multiple processors and the execution time with just one processor. 
+% \end{itemize}
+\item  Scalability:  Measure of a parallel system’s capacity to increase  performance when the complexity, or size of the problem, increases.
+An application is said to be scalable when its efficiency is maintained by increasing the number of processes and the size of the problem, proportionally,
+reflecting its capacity in making use of available resources effectively.
+% \begin{itemize}
+% \item An application is said scalable when its efficiency is maintained when we increase proportionally the number of processors and the size of the problem.
+% \item The scalability of an application reflects its capacity in making use of available resources effectively.
+% \end{itemize}
+The efficiency is defined as the ratio of speedup to the number of processors and measures the fraction of time for which a processor is usefully utilized.
+\begin{equation*}
+E=\frac{S}{p} = \frac{T_{seq}}{pT_{par}}
+\end{equation*}
+where $p$ is the numbert of processes, $T_{seq}$ serial runtime of the sequential algorithm, and $T_{par}$ parallel runtime of the algorithm to be solve on $p$ processors
+\begin{itemize}
+\item Increase number of processors,  decrease efficiency
+\item Increase problem size,  increase efficiency
+\end{itemize}
+A scalable parallel system can keep efficiency (made the cost-optimal) by adjusting the number of processors and the problem size simultaneously.
+Note that an algorithm may have different performance, efficiency and scalabilioty on different parallel architecture.
+% A scalable parallel system can keep efficiency by increasing the number of processors and the problem size simultaneously
+% A scalable parallel system can always be made cost‐optimal by adjusting the number of processors and the problem size.
+% Note that an algorithm may have different performance on different parallel architecture.
+\end{itemize}
+However, there are architectural and algorithm limitations factors that limited the performance and scalability of the 3D SVL. 
+To made sense of the effect of these limitation we use the isoefficiency analysis \cite{Yang_Tian_Hai}.
+%\begin{itemize}
+%\item Architectural limitations: Latency and Bandwidth, Data Coherency, and Memory Capacity.
+% \begin{itemize}
+%  \item Latency and Bandwidth
+%  \item Data Coherency
+%  \item Memory Capacity 
+% \end{itemize}
+%\item Algorithmic limitations : Missing Parallelism (sequential code), Communication Frequency, Synchronization Frequency, and Poor Scheduling (task granularity/load balancing).
+% \begin{itemize}
+%  \item Algorithmic Limitations
+%  \item Missing Parallelism (sequential code)
+%  \item Communication Frequency
+%  \item Synchronization Frequency
+%  \item Poor Scheduling (task granularity/load balancing)
+% \end{itemize}
+%\end{itemize}
+%The isoefficiency function determines the growth rate of $T_s$ (number of basic computation steps to solve the problem on a single processor) required to keep the efficiency fixed as $p$ increases.
+The isoefficiency analysis is a way to measure scalability and allows us to calculate at what growth rate we should increase the problem size while increasing the number of processors $p$
+in order to keep the efficiency fixed. The reason we cannot simply double the problem size when we double the number of processors is because of parallel overhead
+(for example, communication overhead), which typically depends on both the problem size and the number of processors\cite{Grama_Gupta_Kumar}. 
+% Because it is defined in terms of sequential time complexity, the problem size is a function of the size of the input.
+% The symbol we use to denote problem size is $W$. We assume that it takes unit time to perform one basic computation step of an algorithm.
+% This assumption does not impact the analysis of any parallel system because the other hardware-related constants, such as message startup time,
+% per-word transfer time, and per-hop time, can be normalized with respect to the time taken by a basic computation step. 
+% With this assumption, the problem size $W$ is equal to the serial runtime $T_{seq}$ of the fastest known algorithm to solve the problem on a sequential computer.
+
+The Isoefficiency function, parallel execution time can be expressed as a function of problem size, overhead function, and the number of processing elements. 
+We can write parallel runtime as
+\begin{equation*}
+ % T_{par}(N,p) = \frac{T_{seq}(N)-T_{over}(N,p)}{p}
+  T_{par}(N,p) = \frac{W-T_{over}(W,p)}{p}
+\end{equation*}
+The overhead function $T_{over}(W,p)$ is the part of the parallel system cost (processor‐time product) that is not incurred by the fastest known serial algorithm on a serial computer.
+%Let $T_{over}(N,p)$ be the total amount of time spent by all processes doing work not done by the sequential algorithm.
+% Therefore,the parallel overhead is defined as
+% \begin{equation*}
+%  T_{over}(N,p) = pT_{par}(N,p)-T_{seq}(N)
+% \end{equation*}
+The parallel efficiency can be expressed as a function of the total overhead $T_{over}$ and the sequential execution time $T_{seq}$ as follows:
+\begin{equation*}
+E  = \frac{S}{p} = \frac{T_{seq}(N)}{p\;T_{par}(N,p)} = \frac{T_{seq}(N)}{W-T_{over}(W,p)}%\frac{1}{1+\frac{T_{over}(W,p)}{T_{seq}(N)}}
+\end{equation*}
+% Solving for  $T_{seq}$, we obtain the isoeffiency equation
+% \begin{equation*}
+% T_{seq}(N) = \frac{E}{1-E}T_{over}(W,p)
+% \end{equation*}
+where $E$ is the desired efficiency to be maintained. 
+%Substituting $W=T_{seq}(N)$, where $W$ represents the workload, and, given an expression for $T_{over}(W,p)$,
+%The symbol we use to denote problem size is $W$. 
+We assume that it takes unit time to perform one basic computation step of an algorithm.
+This assumption does not impact the analysis of any parallel system because the other hardware-related constants, such as message startup time,
+per-word transfer time, and per-hop time, can be normalized with respect to the time taken by a basic computation step. 
+With this assumption, the problem size $W$ is equal to the serial runtime $T_{seq}(N)$ of the fastest known algorithm to solve the problem on a sequential computer.
+\begin{equation*}
+E  = \frac{S}{p} = \frac{W}{W-T_{over}(W,p)}%\frac{1}{1+\frac{T_{over}(W,p)}{T_{seq}(N)}}
+\end{equation*}
+We can solve for $W$ in terms of $p$ to give a function that tells us how we should scale up $W$ as we increase $p$.
+\begin{equation*}
+W = \frac{E}{1-E} T_{over}(W,p) = K\;T_{over}(W,p)
+\end{equation*}
+Highly scalable systems have small isoefficiency function. 
+
+Our research results show that the SVL isoefficiency scaling cannot maintain the efficiency as we scale up the problem size and the computer system
+resources simultaneously. On the other hand, the SVL code increases its efficiency as the problem size increases. Considering a more significant problem could show improving scalability.
+The lower values we get in the efficiency are due to the parallel overhead. We can not account for all the overhead as interprocessor communication.
+We suspect that memory pressure and contention are causing some of the overhead. We can try to reduce that effect by improving the way the linear system is solved
+\cite{Coronado_Barrientos_Indalecio_Garcia_2018, R_Hunger_2007_FLOPs}.
+% FUTURE WORK
+Our future work consists of improving the efficiency and scalability by reducing the overload performance of communication overhead.
+Moving data limited the performance achievement of the SVL code. Improving the scalability as the problem size and the number
+of processors grow is an essential factor in getting a better performance of the SVL code.
+\subsection*{A Research Agenda}
+% Proposed Research
+% The Statement of Proposed Research is a delicate mixture of fact and fiction. On the one hand, you know what you would like to keep working on, based on your current research.
+% This gives a nice basis for starting to write your statement. However, keep in mind that when you arrive at your new position, and have attended a few seminars, it may dawn on
+% you that there is no one in the department you are now a member of, who knows about  what you do. So how do you keep working on a subject that you have no one to discuss it
+% with? Typically, you don't.
+% The point is simply that it is impossible to know what the future will bring, so do not write with such conviction that a
+% reader at another university thinks you are not interested in working with anyone there.
+% After describing what immediate projects you plan to work on, for example during the Summer & Fall semesters after graduation, then you need to write about some research
+% projects you may have in mind for the following year.
+
+In the course of my research, I have noticed a number of hardware advances in parallel computing architecture, insights into algorithms as well as analysis techniques
+aid in the design of elegant and simple solutions.
+I envisage the field of mathematical modeling created from the ground up, building upon the foundations of a number of fields. One in particular field in computer science get my attention, machine learning.
+Even though, I did not work directly with machine learning. Many of the mathematical armories I am awarded. It has been used in machine learning.   
+
+% In the near future
+In the near future, I am interested in the principles involved in the design of necessary application of machine learning in combination with frameworks of mathematical modeling and parallel computing.
+Parallelism can play a crucial role in improving the performance of machine learning techniques. Since machine learning uses methods of data analysis that automates analytical 
+models technique that teaches computers to do what comes naturally to humans and animals;
+learn from experience and improve their learning over time in autonomous fashion, by feeding them data and information in the form of observations and real-world interactions.
+Machine learning requires the use of intensive data analysis to improve the quality of their learning over time, and parallel computing can play a fundamental key in speed up
+the computational process of improving the performance of machine learning models.
+The flexibility of machine learning techniques models allows researchers, data scientists, engineers, and analysts to produce reliable, repeatable decisions and results and uncover 
+hidden insights from complexity relationships and trends in the data and mathematical model  techniques\cite{Tarca_2007_Machine_Learning_Biology}.
+
+% In the future
+In the future, my research will involve a right mix of futuristic and present-day research where performance and scalability will remain essential, in improving the performance of any application.
+One part of my work will focus on fundamentally different proposals and radical solutions that involve mathematical modeling and machine learning in combination with parallel tools
+libraries to perform complex calculations so that we can achieve performance level without too much cost in calculation time and overhead will still be required as a way to improve quality code performance.
+
+% Also need more newer examples.
+As an example, many areas in which parallel computing in combination with numerical techniques can be used. Remain an open research field for machime learning. 
+Below, I am pointing out few ones that I am particularly interested in developing.
+
+\begin{itemize}\itemsep -2pt
+\item Biology: The relations between biology and the field of machine learning is long and complex. Nowadays, modern biology can benefit from the advancements made in the area of machine learning techniques. 
+The success or failure of machine learning techniques on a given problem is sometimes a matter of the expertise of the user and  the quality of the indices used to evaluate the results.
+ It should be clear that choice, tuning, and diagnosis of machine learning applications are far from mechanical, although caution should be taken when judging the superiority of some machine learning approaches over other categories of methods
+involved in the classifier design should be cross-validated to obtain an unbiased estimate for classifier accuracy.
+In addition, using mathematical models to understand the biological processes that shape population and community dynamics, with a
+particular interest in the evolution of infectious diseases and modeling problems in systems biology\cite{Tarca_2007_Machine_Learning_Biology}. 
+\item Physics: Laboratoiers like CERN handles so much data in a single run of the Large Hadron Collider. Machine learning algorithms are used
+to check for anomalous data and to present a summarised report for humans to work with. Therefore, instead of hard-coding programs for a specific singular task,
+we can now teach machines to learn and adapt themselves for different tasks at hand and intuitive models of physical systems can be replaced by abstract models
+of data and mechanical patterns of cause and effect. In addition, the use numerical analyses to study the dynamics of material mixing, molecular dynamics, elasticity,
+material transport, radiation transport and multi-scale material modeling. 
+\item Geoscience: An improving in better sensing technologies, in better computational resources for running large-scale simulations models,
+and internet-based democratization of data that has enabled the collection, storage, and processing made geosciences witnessed a 
+major revolution from being a data-poor field to a data-rich field. These acculation of data and technology advance made application of machine learning
+techniques very useful in geosciences and remote sensing areas\cite{ML_Geoscience}.
+\item Electrodynamics Applications : Machine learning prediction is becoming increasingly popular. It provides great advantages for problems that are difficult
+for human but easy to solve for machine. For example, machine learning prediction of electromagnetic frequencies had been tried to be estimated using machine learning. 
+Also, the use parallel computing as well as mathematical tools to impletement and speed up computational simulation eletrodynamics applications. 
+\item Network/Cyber Security :
+With the increased popularity of machine and deep learning tools. A lot of security practitioners believe that these approaches are the magic silver bullet we have been waiting
+to solve all of our cybersecurity challenges. To make a broad statement, we are trying to find anomalies, identify malicious behavior or malicious entities; call them hackers,
+attackers, malware, unwanted behavior, etc.  In abstract terms, these events are not statistical. For example, an increase in network traffic might be statistically unusual,
+but from a security point of view, that rarely ever represents an attack.  To address these issues properly, we need to mix experience and knowledge.
+We have to work with experts to capture their knowledge and use that on the algorithms to reveal actual security insights or issues, just like you work
+with a teacher (the expert) to have him guide you on your journey \cite{ML_cyber_security_Barreno, ML_Application_Network_Detection}.
+\item Computer Vision: Machine learning methods have added an enormous boost to the rapidly developing field of computer vision.
+Today a lot of new applications of computer vision techniques have been introduced and are now becoming parts of our everyday lives.
+Data collection has become increasingly exponentially putting on a rigorous challenge to the scalability and robustness of the computer vision and machine learning algorithms. 
+The manipulation of images viewpoint variation,  illumination, occlusion, scale, deformation, background clutter, and intra-class variation variables
+are used to learn what distinguishes them rather than specify the difference in objects recognition, face recognition and indexing, photo stylization or machine vision in self-driving cars.
+Making harder to understand the internal mechanics of this technology\cite{ML_Computer_Vision}. 
+\end{itemize}
+Machine learning has been accelerating the upward trend over the last few years. It provides great advantages for problems that are difficult for human but easy to solve for machine.
+As a result, machine prediction is becoming increasingly popular.  Practically every commercial and scientific domain has witnessed a major revolution in data acculation, from being 
+a data-poor field to a data-rich field. This acculation of big data offers immense potential for machine learning techiques that can be widely applied to the science and engineering problems.
+
+In contrast, I intend to devote the other part of my work on practical systems, which have immediate relevance and impact in the industry.
+I intend to work closely with a number of researchers in related fields. Similarly, I intend to collaborate with industry in understanding and developing solutions for practical problems.
+I believe my past experience of research work done jointly with a number of colleagues
+will help to be problem solver created and % as well as my prior record of participation with Industry
+help me achieve my goals. I am excited at the prospect of learning, contributing, giving shape and making an impact in this upcoming and challenging fields.  
+
+%I have experience in solving problems which made me very created when it is needed.
+
+%\vspace{0.5cm}
+%\begin{flushright}
+%Sundar Iyer
+%\end{flushright}
+
+\end{small}
+
+%\newpage
+\bibliography{References/PhD_Thesis_Bibliography}
+\end{document}
+

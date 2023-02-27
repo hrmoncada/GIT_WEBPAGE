@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  This Beamer template was created by Cameron Bracken.
+%%  Anyone can freely use or modify it for any purpose
+%%  without attribution.
+%%
+%%  Last Modified: January 9, 2009
+%%
+
+\documentclass[xcolor=x11names,compress]{beamer}
+
+%% General document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,pdftex]{xcolor}
+% \usepackage{tikz,ifthen}
+% \usetikzlibrary{decorations.fractals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Beamer Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useoutertheme[subsection=false,shadow]{miniframes}
+\useinnertheme{default}
+\usefonttheme{serif}
+\usepackage{palatino}
+
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+
+\setbeamercolor*{lower separation line head}{bg=DeepSkyBlue4} 
+\setbeamercolor*{normal text}{fg=black,bg=white} 
+\setbeamercolor*{alerted text}{fg=red} 
+\setbeamercolor*{example text}{fg=black} 
+\setbeamercolor*{structure}{fg=black} 
+ 
+\setbeamercolor*{palette tertiary}{fg=black,bg=black!10} 
+\setbeamercolor*{palette quaternary}{fg=black,bg=black!10} 
+
+\renewcommand{\(}{\begin{columns}}
+\renewcommand{\)}{\end{columns}}
+\newcommand{\<}[1]{\begin{column}{#1}}
+\renewcommand{\>}{\end{column}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\scshape Introduction}
+\begin{frame}
+\title{\huge{Flaxy}}
+\subtitle{A Web Proxy With Balls}
+%TODO: Change this
+\author{
+	Ryan Case, David Kadish and Matt Zulak
+}
+\date{
+	%\includegraphics[width=0.3\textwidth]{images/flaxy_logo}
+% 	\begin{tikzpicture}[decoration=Koch curve type 2] 
+% 		\draw[DeepSkyBlue4] decorate{ decorate{ decorate{ (0,0) -- (3,0)
+% 		}}};
+% 	\end{tikzpicture}  
+% 	\\
+% 	\vspace{1cm}
+	
+	\today
+}
+\titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Audience motivator (appropriate, integrated)
+% Preview (clear, complete) 
+% Defined purpose
+% Sensible motivation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Introduction}
+\tableofcontents
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Clarity, balance, logical sequence of main points
+% Transitions (between points)
+% Supporting materials (evidence, examples) 
+% Language use (appropriate for audience, clear, understandable)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\scshape Discussion}
+\subsection{Pointed Page}
+\begin{frame}{Pointed Page}
+\begin{itemize}
+\item Point
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Purpose (clear, achieved)
+% Recommendations (understandable)
+% Closing statement (appropriate, integrated)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\scshape Conclusions}
+\subsection{Page With Columns}
+\begin{frame}{Page With Columns}
+\begin{columns}
+\begin{column}[left]{0.5\textwidth}
+
+\end{column}
+\begin{column}[right]{0.5\textwidth}
+
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{\scshape References}
+\begin{frame}{References}
+\bibliographystyle{IEEEtran}
+\bibliography{flaxy}
+\end{frame}
+
+\end{document}

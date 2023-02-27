@@ -1,0 +1,78 @@
+Software :
+Seamonkey : https://www.seamonkey-project.org/releases/
+Filezilla: https://filezilla-project.org/
+
+Open a terminal CTRL + T
+FileZilla is a free software, cross-platform FTP application, consisting of FileZilla Client and FileZilla Server.
+Install FileZilla
+sudo apt-get install filezilla
+
+
+My web page:
+   index.html
+   Research_Group.html
+   Research_Interest.html
+   Select_Publication.html
+   pictures.html
+   Teaching.html
+
+FTP:
+ftp://utminers.utep.edu/hrmoncadalopez/
+
+HTTP:
+http://utminers.utep.edu/hrmoncadalopez/
+
+Username:
+hrmoncadalopez
+
+Password
+abhrml
+
+link home webpage : https://utminers.utep.edu/hrmoncadalopez/index.html
+link Source webpage : http://utminers.utep.edu/hrmoncadalopez/Source_code.html
+
+=================================================
+UPLOAD WEDPAGE YEAR 2020
+=================================================
+Open FileZilla
+
+   host    : utminers.utep.edu
+   username: miners\hrmoncadalopez
+   passwrod: utep-password
+
+Click Quickconnect : next, trasfer the files --> (FTP transfer)
+=================================================
+UPLOAD WEDPAGE YEAR 2022
+=================================================
+
+Connect using
+Open FileZilla
+   host : utminers.utep.edu
+   username: hrmoncadalopez@utep.edu
+   port :21
+   password : utep-password
+
+After you fille the infomation about, you call it back  
+   Server/reconnect
+   password : utep-password
+
+Click Quickconnect: next, trasfer the files --> (FTP transfer)
+
+0. Update permission in the folder (right click)
+1. Move to your folder (left bottom)
+2. Locate your repo in utep cloud (right bottom) 
+3. Highlight your files and folder (left bottom) and rigth click ( move on the queue)
+4. Highlight your files and folder (left bottom) and rigth click ( move on the Upload)
+5. Pemission, highlight your files and folder (rigth bottom) and rigth click (File permissions)
+6. my page can see on the browser by typing
+   https://utminers.utep.edu/hrmoncadalopez
+
+Folder permissions :
+Remember home.html page must be name index.html, always
+644: Files with permissions set to 644 are readable by everyone and writeable only by the file/folder owner.
+755: Files with permissions set to 755 are readable and executable by everyone, but only writeable by the file/folder owner.
+777: Files with permissions set to 777 are readable, writeable, and executable by everyone. Don’t use this set of permissions, for security reasons, on your web server unless absolutely necessary.
+
+Most often, you’re given directions by the plugin or theme developer on which permissions number to assign to the file or folder, and typically, it’s either 644 or 755. Y
+
+

@@ -1,0 +1,6 @@
+Fiona:backgroun$ identify gray_1.jpeg 
+gray_1.jpeg JPEG 367x137 367x137+0+0 8-bit sRGB 2091B 0.000u 0:00.000
+Fiona:backgroun$ identify gray_2.jpeg 
+identify-im6.q16: unable to open image `gray_2.jpeg': No such file or directory @ error/blob.c/OpenBlob/2874.
+Fiona:backgroun$ identify gray_2.jpg
+gray_2.jpg JPEG 1920x1200 1920x1200+0+0 8-bit sRGB 479430B 0.000u 0:00.000
