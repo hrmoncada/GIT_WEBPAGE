@@ -6,6 +6,7 @@ This repo host two folders
   * UTEP_Henry_Webpage_Final_2023_Google_site/
 ## Check repo status 
 **$ git status**
+
 On branch main
 Your branch is up to date with 'origin/main'.
 
