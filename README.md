@@ -18,10 +18,12 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 
 ## check the branch
+
 $ git branch -a
 * main
   remotes/origin/HEAD -> origin/main
   remotes/origin/main
+
 ## Add files and folder and commit
 $ git add . && git commit -m "First Commit"
 [main d21fa14] First Commit
