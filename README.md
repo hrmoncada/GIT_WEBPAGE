@@ -26,11 +26,13 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ## Add files and folder and commit
 **$ git add . && git commit -m "First Commit"**
+
 [main d21fa14] First Commit
 ...
 
 ## Check the links	
 **$ git remote -v** 
+
 origin	https://github.com/hrmoncada/GIT_WEBPAGE.git (fetch)
 origin	https://github.com/hrmoncada/GIT_WEBPAGE.git (push)
 
