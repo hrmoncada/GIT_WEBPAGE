@@ -61,3 +61,90 @@ remote: Resolving deltas: 100% (23/23), done.
 To https://github.com/hrmoncada/GIT_WEBPAGE.git
    f801973..d21fa14  main -> main
 ```
+
+
+### Add a file or folder/ to a Git repository
+
+1. From your terminal, change to the root directory where do you want to store a repository.
+````
+$ git clone https://github.com/hrmoncada/https://github.com/hrmoncada/GAMESS_REPORT.git.git
+````
+````
+$ cd GAMESS_REPORT
+````
+2. Initialize the directory under version control from the following command:
+````
+$ git init     
+````
+3. Add the existing files and folder to the repository you have initialized:
+- files
+````
+$ git add .
+````
+- file
+````
+$ git add file
+````
+- folder
+````
+$ git add folder/     
+````
+4. Commit the files:
+````
+$ git commit -m "initial commit of full repository"     
+````
+omit 5 and 6, and continue in 7.
+
+5. Verifies the new remote URL
+```` 
+$ git remote -v
+origin	https://github.com/hrmoncada/GAMESS_REPORT.git (fetch)
+origin	https://github.com/hrmoncada/GAMESS_REPORT.git (push)
+````
+6. Skip this step if you clone your repo. Connect your new local Git repository to the remote repository. To do so, enter git remote add origin with the remote URL:
+````
+$ git remote add origin <bitbucket_URL>     
+````
+You can find the URL next to the git clone command for the repository.
+
+Remote origin already exists" error. The solution is to update the URL of the remote repository with the name “origin” to the URL of the remote repository you want to add, instead of trying to create a new remote repository with that name.
+````
+$ git remote set-url origin https://github.com/your/repository
+````
+7. Push all the code in your local repo to Bitbucket with the following command:
+````
+git push
+````
+or
+````
+$ git push  -u origin main
+````
+
+<!--
+### What is this repository for? ###
+
+* Quick summary
+* Version
+* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+
+### How do I get set up? ###
+
+* Summary of set up
+* Configuration
+* Dependencies
+* Database configuration
+* How to run tests
+* Deployment instructions
+
+### Contribution guidelines ###
+
+* Writing tests
+* Code review
+* Other guidelines
+
+### Who do I talk to? ###
+
+* Repo owner or admin
+* Other community or team contact
+-->
+
