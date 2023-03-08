@@ -12,7 +12,7 @@ This repository contain two folders :
 # Git Commands :      
 ## Check repo status 
 **$ git status**
-
+```
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -23,13 +23,14 @@ Untracked files:
 	UTEP_Henry_Webpage_Final_Basic_Info.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
-
+```
 ## check the branch
 **$ git branch -a**
+```	
 * main
   remotes/origin/HEAD -> origin/main
   remotes/origin/main
-
+```
 ## Add files and folder and commit
 **$ git add . && git commit -m "First Commit"**
 
@@ -38,13 +39,13 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ## Check the links	
 **$ git remote -v** 
-
+```
 origin	https://github.com/hrmoncada/GIT_WEBPAGE.git (fetch)
 origin	https://github.com/hrmoncada/GIT_WEBPAGE.git (push)
-
+```
 ## Push commit 
 **$ git push origin main**
-
+```
 Username for 'https://github.com': hrmoncada
 
 Password for 'https://hrmoncada@github.com': 
@@ -59,4 +60,4 @@ remote: Resolving deltas: 100% (23/23), done.
 
 To https://github.com/hrmoncada/GIT_WEBPAGE.git
    f801973..d21fa14  main -> main
-
+```
