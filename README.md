@@ -33,7 +33,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
 ## Add files and folder and commit
 **$ git add . && git commit -m "First Commit"**
-
+```
 [main d21fa14] First Commit
 ...
 
