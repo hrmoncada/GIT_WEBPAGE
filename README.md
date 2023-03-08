@@ -62,8 +62,7 @@ To https://github.com/hrmoncada/GIT_WEBPAGE.git
    f801973..d21fa14  main -> main
 ```
 
-
-### Add a file or folder/ to a Git repository
+# Add a file or folder/ to a Git repository
 
 1. From your terminal, change to the root directory where do you want to store a repository.
 ````
