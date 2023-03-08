@@ -1,9 +1,11 @@
 # GIT_WEBPAGE
-This repo host two folders :
+This repository contain two folders :
 
-  * This webpage was builded using seamonkey - UTEP_Henry_Webpage_Final_2022_seamonkey/
-  * This webpage was builded using google site - UTEP_Henry_Webpage_Final_2023_Google_site/
-  * 
+  1. This webpage was builded using seamonkey
+      *. UTEP_Henry_Webpage_Final_2022_seamonkey/
+  3. This webpage was builded using google site
+      *. UTEP_Henry_Webpage_Final_2023_Google_site/
+      
 ## Check repo status 
 **$ git status**
 
