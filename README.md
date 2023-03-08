@@ -2,12 +2,12 @@
 This repository contain two folders :
 
   1. This webpage was builded using seamonkey
-  ```diff
-  * UTEP_Henry_Webpage_Final_2022_seamonkey/
+  ```
+  UTEP_Henry_Webpage_Final_2022_seamonkey/
   ```    
   3. This webpage was builded using google site
- ```diff
- * UTEP_Henry_Webpage_Final_2023_Google_site/
+ ```
+ UTEP_Henry_Webpage_Final_2023_Google_site/
   ```
 # Git Commands :      
 ## Check repo status 
